@@ -1,0 +1,94 @@
+.footer {
+    background-color: #0d2436;
+    /* Darker shade of Alpine Slate */
+    color: var(--color-glacial-stone);
+    padding: 80px 0 40px;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 60px;
+}
+
+.brand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-clinical-white);
+}
+
+.tagline {
+    opacity: 0.7;
+    font-size: 1.1rem;
+}
+
+.links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.column h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    color: var(--color-mustard-gold);
+}
+
+.column a,
+.column p {
+    display: block;
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.column a:hover {
+    opacity: 1;
+    color: var(--color-clinical-white);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.legal {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
