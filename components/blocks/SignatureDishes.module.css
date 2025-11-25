@@ -1,0 +1,88 @@
+.section {
+    padding: 100px 20px;
+    background-color: var(--color-clinical-white);
+    color: var(--color-alpine-slate);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 40px;
+    padding-bottom: 40px;
+    scroll-snap-type: x mandatory;
+}
+
+.slide {
+    flex: 0 0 400px;
+    scroll-snap-align: center;
+}
+
+.imageContainer {
+    position: relative;
+    height: 500px;
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imageRaw,
+.imagePlated {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    transition: flex 0.5s ease;
+}
+
+.imageRaw:hover,
+.imagePlated:hover {
+    flex: 2;
+}
+
+.label {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-alpine-slate);
+}
+
+.dishName {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dishDescription {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.dishType {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-roasted-copper);
+    border: 1px solid var(--color-roasted-copper);
+    padding: 2px 8px;
+    border-radius: 4px;
+}

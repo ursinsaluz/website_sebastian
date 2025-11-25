@@ -1,0 +1,11 @@
+export default function cloudflareLoader({ src, width, quality }: { src: string, width: number, quality?: number }) {
+    if (process.env.NODE_ENV === 'development') {
+        return src
+    }
+    const params = [`width=${width}`]
+    if (quality) {
+        params.push(`quality=${quality}`)
+    }
+    const paramsString = params.join(',')
+    return `/cdn-cgi/image/${paramsString}/${src}`
+}
