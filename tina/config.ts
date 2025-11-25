@@ -43,6 +43,15 @@ export default defineConfig({
           },
           {
             type: "object",
+            name: "seo",
+            label: "SEO & Metadata",
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "description", label: "Description" },
+            ],
+          },
+          {
+            type: "object",
             list: true,
             name: "blocks",
             label: "Sections",
@@ -114,9 +123,6 @@ export default defineConfig({
                 label: "Signature Dishes Showcase",
                 fields: [
                   { type: "string", name: "title", label: "Title" },
-                  // We will reference dishes collection or just inline them here?
-                  // Referencing is better but for simplicity inline might be easier.
-                  // Let's reference.
                   {
                     type: "object",
                     list: true,
@@ -131,6 +137,22 @@ export default defineConfig({
                       },
                     ],
                   },
+                ],
+              },
+              {
+                name: "contactForm",
+                label: "Contact Form",
+                fields: [
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "email", label: "Recipient Email" },
+                ],
+              },
+              {
+                name: "news",
+                label: "News Section",
+                fields: [
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "description", label: "Description" },
                 ],
               },
             ],
@@ -155,7 +177,29 @@ export default defineConfig({
           { type: "string", name: "description", label: "Description" },
           { type: "image", name: "imageRaw", label: "Raw Image (Soil)" },
           { type: "image", name: "imagePlated", label: "Plated Image (Soul)" },
+          { type: "image", name: "imageSketch", label: "Recipe Sketch" },
           { type: "string", name: "type", label: "Type", options: ["Starter", "Main", "Dessert"] },
+          {
+            type: "object",
+            name: "ingredients",
+            label: "Ingredients",
+            list: true,
+            fields: [
+              { type: "string", name: "amount", label: "Amount" },
+              { type: "string", name: "unit", label: "Unit" },
+              { type: "string", name: "name", label: "Name" },
+            ],
+          },
+          { type: "rich-text", name: "instructions", label: "Instructions" },
+          {
+            type: "object",
+            name: "seo",
+            label: "SEO & Metadata",
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "description", label: "Description" },
+            ],
+          },
         ],
       },
       {
@@ -167,8 +211,19 @@ export default defineConfig({
           { type: "string", name: "title", label: "Title", isTitle: true, required: true },
           { type: "datetime", name: "date", label: "Date" },
           { type: "image", name: "coverImage", label: "Cover Image" },
+          { type: "string", name: "lead", label: "Lead Text" },
+          { type: "string", name: "externalLink", label: "External Link" },
           { type: "rich-text", name: "body", label: "Body" },
           { type: "string", name: "tags", label: "Tags", list: true },
+          {
+            type: "object",
+            name: "seo",
+            label: "SEO & Metadata",
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "description", label: "Description" },
+            ],
+          },
         ],
       },
     ],

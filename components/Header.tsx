@@ -27,7 +27,9 @@ export const Header = () => {
                     <Link href="/#philosophy" className={styles.navLink}>Philosophie</Link>
                     <Link href="/#about" className={styles.navLink}>Über Mich</Link>
                     <Link href="/#offerings" className={styles.navLink}>Angebote</Link>
-                    <Link href="/contact" className={styles.navLink}>Kontakt</Link>
+                    <Link href="/#signatureDishes" className={styles.navLink}>Signature Dishes</Link>
+                    <Link href="/#news" className={styles.navLink}>News</Link>
+                    <Link href="/kontakt" className={styles.navLink}>Kontakt</Link>
                 </nav>
 
                 <button
@@ -42,7 +44,9 @@ export const Header = () => {
                         <Link href="/#philosophy" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Philosophie</Link>
                         <Link href="/#about" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Über Mich</Link>
                         <Link href="/#offerings" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Angebote</Link>
-                        <Link href="/contact" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Kontakt</Link>
+                        <Link href="/#signatureDishes" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Signature Dishes</Link>
+                        <Link href="/#news" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>News</Link>
+                        <Link href="/kontakt" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Kontakt</Link>
                     </div>
                 )}
             </div>

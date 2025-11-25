@@ -8,6 +8,9 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 export const metadata: Metadata = {
   title: 'Sebastian Titz - Soil to Soul',
   description: 'Kulinarische Exzellenz in Graubünden. Head Chef Klinik Gut Fläsch & Restaurant PINOT.',
+  icons: {
+    icon: '/icon.svg',
+  },
 }
 
 import { Header } from '../components/Header'
@@ -19,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable}`}>
         <Header />
         <main>{children}</main>

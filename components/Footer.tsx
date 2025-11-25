@@ -17,6 +17,8 @@ export const Footer = () => {
                             <Link href="/#philosophy">Philosophie</Link>
                             <Link href="/#about">Über Mich</Link>
                             <Link href="/#offerings">Angebote</Link>
+                            <Link href="/#signatureDishes">Signature Dishes</Link>
+                            <Link href="/#news">News</Link>
                         </div>
                         <div className={styles.column}>
                             <h3>Kontakt</h3>

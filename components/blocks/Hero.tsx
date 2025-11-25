@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './Hero.module.css'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const Hero = ({ data }: { data: any }) => {
     return (
         <section className={styles.hero}>

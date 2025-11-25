@@ -2,9 +2,10 @@ import Image from 'next/image'
 import { TinaMarkdown } from 'tinacms/dist/rich-text'
 import styles from './About.module.css'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const About = ({ data }: { data: any }) => {
     return (
-        <section className={styles.section}>
+        <section id="about" className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>{data.title}</h2>
@@ -15,6 +16,7 @@ export const About = ({ data }: { data: any }) => {
 
                 <div className={styles.content}>
                     <div className={styles.timeline}>
+                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                         {data.timeline?.map((item: any, index: number) => (
                             <div key={index} className={styles.timelineItem}>
                                 <div className={styles.year}>{item.year}</div>

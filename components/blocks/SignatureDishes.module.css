@@ -87,6 +87,26 @@
     border-radius: 4px;
 }
 
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.recipeLink {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-alpine-slate);
+    transition: color 0.3s ease;
+}
+
+.slide:hover .recipeLink {
+    color: var(--color-roasted-copper);
+}
+
 @media (max-width: 768px) {
     .slide {
         flex: 0 0 85vw;

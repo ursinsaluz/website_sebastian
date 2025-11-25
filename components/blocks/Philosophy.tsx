@@ -2,9 +2,10 @@ import Image from 'next/image'
 import { TinaMarkdown } from 'tinacms/dist/rich-text'
 import styles from './Philosophy.module.css'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const Philosophy = ({ data }: { data: any }) => {
     return (
-        <section className={styles.section}>
+        <section id="philosophy" className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.text}>
                     <h2 className={styles.title}>{data.title}</h2>
