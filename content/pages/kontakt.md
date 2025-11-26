@@ -16,7 +16,7 @@ blocks:
       
       Telefon: +41 81 123 45 67
       E-Mail: contact@sebastiantitz.ch
-    image: /images/contact_hero.jpg
+    image: /images/hero_background_1764107610970.png
     _template: philosophy
   - title: Kontaktieren Sie mich
     email: contact@sebastiantitz.ch

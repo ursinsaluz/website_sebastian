@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import styles from './NewsSection.module.css'
 
@@ -19,7 +20,7 @@ export const NewsSection = ({ data, news }: { data: any, news: any[] }) => {
                             <div key={i} className={styles.slide}>
                                 <div className={styles.imageContainer}>
                                     {post.coverImage ? (
-                                        <Image src={post.coverImage} alt={post.title} fill style={{ objectFit: 'cover' }} />
+                                        <Image src={post.coverImage} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
                                     ) : (
                                         <div style={{ width: '100%', height: '100%', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ccc' }}>
                                             No Image
@@ -35,14 +36,14 @@ export const NewsSection = ({ data, news }: { data: any, news: any[] }) => {
                                         {post.lead}
                                     </p>
                                     {post.externalLink ? (
-                                        <a
+                                        <Link
                                             href={post.externalLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
+                                            target={post.externalLink.startsWith('http') ? '_blank' : undefined}
+                                            rel={post.externalLink.startsWith('http') ? 'noopener noreferrer' : undefined}
                                             className={styles.link}
                                         >
                                             Mehr lesen &rarr;
-                                        </a>
+                                        </Link>
                                     ) : (
                                         <span style={{ fontSize: '0.9rem', color: '#999' }}>Coming soon</span>
                                     )}

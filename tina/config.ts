@@ -175,6 +175,7 @@ export default defineConfig({
         fields: [
           { type: "string", name: "name", label: "Name", isTitle: true, required: true },
           { type: "string", name: "description", label: "Description" },
+          { type: "image", name: "heroImage", label: "Hero Image" },
           { type: "image", name: "imageRaw", label: "Raw Image (Soil)" },
           { type: "image", name: "imagePlated", label: "Plated Image (Soul)" },
           { type: "image", name: "imageSketch", label: "Recipe Sketch" },

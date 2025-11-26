@@ -1,6 +1,6 @@
 export default function cloudflareLoader({ src, width, quality }: { src: string, width: number, quality?: number }) {
     if (process.env.NODE_ENV === 'development') {
-        return src
+        return `${src}?w=${width}`
     }
     const params = [`width=${width}`]
     if (quality) {

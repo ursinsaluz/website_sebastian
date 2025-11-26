@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ filename:
             title: res.data.page.seo?.title || 'Sebastian Titz',
             description: res.data.page.seo?.description || 'Sebastian Titz - Soil to Soul',
         }
-    } catch (e) {
+    } catch {
         return {
             title: 'Sebastian Titz',
         }

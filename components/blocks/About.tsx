@@ -33,7 +33,7 @@ export const About = ({ data }: { data: any }) => {
                                 alt="Sebastian Titz"
                                 width={500}
                                 height={700}
-                                style={{ objectFit: 'cover' }}
+                                style={{ objectFit: 'cover', objectPosition: 'top center' }}
                             />
                         </div>
                     )}

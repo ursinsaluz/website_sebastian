@@ -19,6 +19,7 @@ export const Offerings = ({ data }: { data: any }) => {
                                         src={item.image}
                                         alt={item.title}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         style={{ objectFit: 'cover' }}
                                     />
                                 </div>
@@ -27,7 +28,12 @@ export const Offerings = ({ data }: { data: any }) => {
                                 <h3 className={styles.itemTitle}>{item.title}</h3>
                                 <p className={styles.description}>{item.description}</p>
                                 {item.link && (
-                                    <Link href={item.link} className={styles.link}>
+                                    <Link
+                                        href={item.link}
+                                        className={styles.link}
+                                        target={item.link.startsWith('http') ? '_blank' : undefined}
+                                        rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                    >
                                         Mehr erfahren &rarr;
                                     </Link>
                                 )}

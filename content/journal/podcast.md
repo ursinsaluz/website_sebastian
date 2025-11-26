@@ -2,7 +2,7 @@
 title: Zu Gast im "Gastro-Talk" Podcast
 date: '2025-11-20T12:00:00.000Z'
 coverImage: https://placehold.co/600x400?text=Podcast+Cover
-lead: 'Ein Gespräch über die Philosophie von Soil to Soul.'" und die Bedeutung von lokalen Produzenten.
+lead: 'Ein Gespräch über die Philosophie von "Soil to Soul" und die Bedeutung von lokalen Produzenten.'
 externalLink: 'https://spotify.com'
 tags:
   - Podcast

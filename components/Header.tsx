@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import styles from './Header.module.css'
 import { Menu, X } from 'lucide-react'
 
@@ -16,8 +17,12 @@ export const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    const pathname = usePathname()
+    const isHome = pathname === '/'
+    const shouldShowBackground = !isHome || isScrolled
+
     return (
-        <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+        <header className={`${styles.header} ${shouldShowBackground ? styles.scrolled : ''} ${isMobileMenuOpen ? styles.menuOpen : ''}`}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
                     ST

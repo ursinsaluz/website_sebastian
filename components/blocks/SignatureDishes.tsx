@@ -24,6 +24,7 @@ export const SignatureDishes = ({ data }: { data: any }) => {
                                                 src={dish.imageRaw}
                                                 alt={`${dish.name} Raw`}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 style={{ objectFit: 'cover' }}
                                             />
                                             <span className={styles.label}>Soil</span>
@@ -35,6 +36,7 @@ export const SignatureDishes = ({ data }: { data: any }) => {
                                                 src={dish.imagePlated}
                                                 alt={`${dish.name} Plated`}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 style={{ objectFit: 'cover' }}
                                             />
                                             <span className={styles.label}>Soul</span>

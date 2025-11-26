@@ -1,4 +1,3 @@
-```
 ---
 title: GaultMillau Auszeichnung 2024
 date: '2025-11-01T12:00:00.000Z'

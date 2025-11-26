@@ -4,9 +4,14 @@
   --color-roasted-copper: #BD674A;
   --color-mustard-gold: #F3B941;
   --color-clinical-white: #F2EFEA;
-  
+
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
+}
+
+html {
+  background-color: var(--color-alpine-slate);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,7 +23,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 400;
   margin: 0;

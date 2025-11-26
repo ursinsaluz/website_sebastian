@@ -16,6 +16,11 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.menuOpen {
+    background-color: var(--color-alpine-slate);
+    backdrop-filter: none;
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;

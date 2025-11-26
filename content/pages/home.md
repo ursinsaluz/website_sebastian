@@ -6,7 +6,7 @@ seo:
 blocks:
   - headline: Soil to Soul
     subline: Sebastian Titz. Kulinarische Exzellenz in Graubünden.
-    backgroundImage: /images/hero_background_1764107610970.png
+    backgroundImage: /images/hero_main.webp
     ctaText: Menü entdecken
     ctaLink: /#offerings
     _template: hero
@@ -20,7 +20,8 @@ blocks:
     body: >
       Von der wilden Zeit bei Stefan Wiesner bis zur Sternenküche im Grand
       Resort Bad Ragaz.
-    image: https://www.klinik-gut.ch/fileadmin/_processed_/7/d/csm_sebastian-titz_e9d5e08ed6.jpg
+    image: >-
+      https://www.klinik-gut.ch/fileadmin/_processed_/7/d/csm_sebastian-titz_e9d5e08ed6.jpg
     timeline:
       - year: '2025'
         station: Klinik Gut Fläsch / Restaurant PINOT

@@ -6,17 +6,17 @@ import styles from './Hero.module.css'
 export const Hero = ({ data }: { data: any }) => {
     return (
         <section className={styles.hero}>
-            {data.backgroundImage && (
+            {data.backgroundImage ? (
                 <div className={styles.bgImage}>
-                    <Image
+                    <img
                         src={data.backgroundImage}
                         alt="Background"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        priority
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                     <div className={styles.overlay} />
                 </div>
+            ) : (
+                <div className={styles.bgImage} style={{ backgroundColor: 'var(--color-alpine-slate)' }} />
             )}
             <div className={styles.content}>
                 <h1 className={styles.headline}>{data.headline}</h1>
