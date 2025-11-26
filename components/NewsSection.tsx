@@ -1,9 +1,33 @@
+import { useState, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './NewsSection.module.css'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const NewsSection = ({ data, news }: { data: any, news: any[] }) => {
+    const [activeSlide, setActiveSlide] = useState(0);
+    const sliderRef = useRef<HTMLDivElement>(null);
+
+    const handleScroll = () => {
+        if (sliderRef.current) {
+            const scrollLeft = sliderRef.current.scrollLeft;
+            // The slide width is 85vw.
+            const slideWidth = sliderRef.current.scrollWidth / (news?.length || 1);
+            const index = Math.round(scrollLeft / slideWidth);
+            setActiveSlide(index);
+        }
+    };
+
+    const scrollToSlide = (index: number) => {
+        if (sliderRef.current) {
+            const slideWidth = sliderRef.current.scrollWidth / (news?.length || 1);
+            sliderRef.current.scrollTo({
+                left: index * slideWidth,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
         <section className={styles.section} id="news">
             <div className={styles.container}>
@@ -12,7 +36,11 @@ export const NewsSection = ({ data, news }: { data: any, news: any[] }) => {
                     <p className={styles.description}>{data.description}</p>
                 </div>
 
-                <div className={styles.slider}>
+                <div
+                    className={styles.slider}
+                    ref={sliderRef}
+                    onScroll={handleScroll}
+                >
                     {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                     {news?.map((item: any, i: number) => {
                         const post = item.node
@@ -51,6 +79,17 @@ export const NewsSection = ({ data, news }: { data: any, news: any[] }) => {
                             </div>
                         )
                     })}
+                </div>
+
+                <div className={styles.dotsContainer}>
+                    {news?.map((_: any, index: number) => (
+                        <button
+                            key={index}
+                            className={`${styles.dot} ${index === activeSlide ? styles.dotActive : ''}`}
+                            onClick={() => scrollToSlide(index)}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
+                    ))}
                 </div>
             </div>
         </section>

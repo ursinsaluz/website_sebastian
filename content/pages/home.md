@@ -4,41 +4,57 @@ seo:
   title: Sebastian Titz | Chefkoch
   description: Soil to Soul
 blocks:
-  - headline: Soil to Soul
-    subline: Sebastian Titz. Kulinarische Exzellenz in Graubünden.
+  - headline: Authentisch. Regional. Exzellent.
+    subline: Sebastian Titz – Kulinarik zwischen Michelin-Stern und Bündner Bodenständigkeit.
     backgroundImage: /images/hero_main.webp
-    ctaText: Menü entdecken
-    ctaLink: /#offerings
+    ctaText: Aktuelles Menü im Pinot
+    ctaLink: 'https://restaurant-pinot.ch'
     _template: hero
   - title: Meine Philosophie
     body: >
-      Vom Boden zur Seele. Meine Küche verbindet die raue Natur Graubündens mit
-      klinischer Präzision.
+      Naturverbunden. Gesundheit ohne Verzicht. Respekt vor dem Produzenten.
+      Verzicht auf schwere Sahnesaucen zugunsten reduzierter Essenzen und
+      Kräuteröle.
     image: /images/philosophy_soil_1764107624202.png
     _template: philosophy
   - title: Ein Weg von Sylt in die Alpen
     body: >
-      Von der wilden Zeit bei Stefan Wiesner bis zur Sternenküche im Grand
-      Resort Bad Ragaz.
+      Vom handwerklich fundierten Lehrling über den avantgardistischen
+      Alchemisten-Schüler bis hin zum Exekutiv-Küchenchef.
     image: /images/0001-79.jpg
     timeline:
       - year: '2025'
         station: Klinik Gut Fläsch / Restaurant PINOT
-        description: Head Chef. Verbindung von Gesundheit und Genuss.
+        description: >-
+          Küchenchef. Rückkehr zur Intimität. Schnörkellose Gerichte mit
+          Wow-Effekt in der Bündner Herrschaft.
       - year: '2019'
         station: Grand Resort Bad Ragaz (verve by sven)
-        description: 'Head Chef. 1 Michelin Stern, 15 GaultMillau Punkte.'
+        description: >-
+          Küchenchef. 1 Michelin Stern, 15 GaultMillau Punkte. Der Beweis, dass
+          Gesundheitsküche pure Lebensfreude ist.
       - year: '2012'
-        station: Hotel Villa Honegg
-        description: Head Chef. 14 GaultMillau Punkte.
-      - year: '2005'
-        station: Gasthof Rössli (Stefan Wiesner)
-        description: Souschef. Die "wilde Zeit".
+        station: Hotel Villa Honegg & Stefan Wiesner
+        description: >-
+          7 Jahre an der Seite von Stefan Wiesner (Der Hexer). Eine radikale
+          Schule der Naturküche. Kochen mit Holz, Stein und Torf.
+      - year: 'Wanderjahre'
+        station: Tschuggen Grand Hotel / Bürgenstock / Jörg Müller Sylt
+        description: >-
+          Präzision in der 5-Sterne-Hotellerie und der Blick über den Tellerrand
+          zur Nordsee.
+      - year: '2000er'
+        station: Restaurant Schneggen
+        description: >-
+          Ausbildung (14 GM). Das Erlernen des französischen Handwerks als
+          Fundament aller Kreativität.
     _template: about
   - title: Angebote
     items:
       - title: Restaurant PINOT
-        description: Fine Dining im Herzen der Bündner Herrschaft.
+        description: >-
+          Fine Dining, Lunch-Menüs, Bündner Weinkultur. Täglich 09:00 – 18:00,
+          Donnerstags Abendessen ab 18:00.
         image: /images/restaurant_interior_1764107684572.png
         link: 'https://restaurant-pinot.ch'
       - title: ACASA Catering

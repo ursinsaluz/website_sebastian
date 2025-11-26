@@ -13,6 +13,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const res = await client.queries.page({ relativePath: 'home.md' })
-  const newsRes = await client.queries.journalConnection({ sort: 'date', last: 3 })
+  const newsRes = await client.queries.journalConnection({ sort: 'date', last: 8 })
   return <ClientPage {...res} news={newsRes.data.journalConnection.edges} />
 }

@@ -17,15 +17,18 @@
 
 .slider {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
     padding-bottom: 40px;
-    scroll-snap-type: x mandatory;
+}
+
+.dotsContainer {
+    display: none;
 }
 
 .slide {
     flex: 0 0 400px;
-    scroll-snap-align: center;
 }
 
 .imageContainer {
@@ -109,6 +112,10 @@
 
 @media (max-width: 768px) {
     .slider {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        /* Fix for first element hidden */
         gap: 20px;
         padding-bottom: 30px;
         /* Ensure horizontal scroll is active */
@@ -119,12 +126,50 @@
            so the shadow/edges aren't cut off */
         padding-left: 20px;
         padding-right: 20px;
+        scroll-padding-left: 20px;
+        /* Ensure snap aligns correctly with padding */
+
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE 10+ */
+    }
+
+    .slider::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari/Webkit */
     }
 
     .slide {
         flex: 0 0 85vw;
         width: 85vw;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
+        /* Better swipe feel */
+    }
+
+    .dotsContainer {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        /* Add space below dots */
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ddd;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .dotActive {
+        background-color: var(--color-roasted-copper);
     }
 
     .imageContainer {
