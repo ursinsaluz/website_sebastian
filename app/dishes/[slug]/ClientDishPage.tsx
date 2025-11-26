@@ -19,6 +19,27 @@ export default function ClientDishPage(props: any) {
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'Recipe',
+                        name: dish.name,
+                        description: dish.description,
+                        image: [dish.imagePlated, dish.imageRaw, dish.imageSketch].filter(Boolean),
+                        author: {
+                            '@type': 'Person',
+                            name: 'Sebastian Titz',
+                        },
+                        recipeIngredient: dish.ingredients?.map((ing: any) => `${ing.amount} ${ing.unit} ${ing.name}`),
+                        recipeInstructions: dish.instructions?.children?.map((child: any) => ({
+                            '@type': 'HowToStep',
+                            text: child.children?.map((c: any) => c.text).join(' '),
+                        })),
+                    }),
+                }}
+            />
 
             <Hero data={{
                 headline: dish.name,

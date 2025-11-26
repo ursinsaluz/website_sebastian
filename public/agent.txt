@@ -1,0 +1,7 @@
+# Agent instructions
+User-agent: *
+Allow: /
+
+# Identity
+Identity: Sebastian Titz
+Description: Personal website of Sebastian Titz, Chef de Cuisine.
