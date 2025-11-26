@@ -109,16 +109,22 @@
 
 @media (max-width: 768px) {
     .slider {
-        flex-direction: column;
-        overflow-x: visible;
-        scroll-snap-type: none;
-        padding-bottom: 0;
+        gap: 20px;
+        padding-bottom: 30px;
+        /* Ensure horizontal scroll is active */
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        /* Add side padding so the first card isn't flush against the edge if we want, 
+           but centering handles it well. Let's add a little padding to the container 
+           so the shadow/edges aren't cut off */
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .slide {
-        flex: 0 0 auto;
-        width: 100%;
-        scroll-snap-align: none;
+        flex: 0 0 85vw;
+        width: 85vw;
+        scroll-snap-align: center;
     }
 
     .imageContainer {
