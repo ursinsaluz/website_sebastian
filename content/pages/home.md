@@ -20,8 +20,7 @@ blocks:
     body: >
       Von der wilden Zeit bei Stefan Wiesner bis zur Sternenküche im Grand
       Resort Bad Ragaz.
-    image: >-
-      https://www.klinik-gut.ch/fileadmin/_processed_/7/d/csm_sebastian-titz_e9d5e08ed6.jpg
+    image: /images/0001-79.jpg
     timeline:
       - year: '2025'
         station: Klinik Gut Fläsch / Restaurant PINOT
